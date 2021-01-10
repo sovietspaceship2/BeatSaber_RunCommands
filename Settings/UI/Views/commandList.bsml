@@ -1,0 +1,21 @@
+﻿<horizontal xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:noNamespaceSchemaLocation='https://raw.githubusercontent.com/monkeymanboy/BSML-Docs/gh-pages/BSMLSchema.xsd'>
+	<custom-list id='commands-list'
+					pref-width="110"
+					contents="available-commands"
+					cell-size="10"
+					pref-height="55"
+					select-cell='command-Select'>
+		<stack size-delta-x="3">
+			<bg bg="panel-top-gradient" bg-color="#BD288199" tags='hovered' size-delta-x="1"/>
+			<bg bg="panel-top-gradient" bg-color="#fff" tags='selected' size-delta-x="1"/>
+			<vertical horizontal-fit='Unconstrained' spacing="-2" child-align="MiddleLeft" pad-left="3" pad-right="3">
+				<text text="~name" font-size="5" rich-text="true" word-wrapping="false" italics="true"/>
+				<text text="~description" font-size="3.5" italics="true"/>
+			</vertical>
+		</stack>
+	</custom-list>
+	<vertical child-control-height='false'>
+		<button text='Run' on-click='runSelected' />
+	</vertical>
+</horizontal>
